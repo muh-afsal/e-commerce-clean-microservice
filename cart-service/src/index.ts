@@ -5,7 +5,6 @@ import { runConsumer } from "./infrastructure/kafka/consumer";
 (async () => {
   try {
     server;
-
     await Promise.all([dbConnection(), runConsumer()])
       .then(() => console.log("kafka consumer is runnnig"))
       .catch((error) => {

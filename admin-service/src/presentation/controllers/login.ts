@@ -13,6 +13,7 @@ export const loginController =(dependencies:IDependencies)=>{
     console.log('reached the login controller----------------------');
 
         try {
+            
             const adminCredentials = req.body;
             const admin:AdminEntity | null = await loginAdminUseCase(dependencies).execute(adminCredentials)
             console.log("🚀🎶🎶😢 ~ file ", admin)
